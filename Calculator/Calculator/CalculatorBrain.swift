@@ -6,12 +6,9 @@
 //
 
 import Foundation
-
 class CalculatorBrain {
-    //istenen işlemler + - * / bonus C CE =
-    //standford university ios 9 > youtube video 1 ya da 2
     private var accumulator: Double = 0
-
+    
     var result: Double {
         get {
             return accumulator
@@ -25,8 +22,58 @@ class CalculatorBrain {
         case "√":
             accumulator = sqrt(result)
         case "=":
-            break
+            operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
+            UserDefaults.standard.set("none", forKey: "PreviousOperation")
+        case "+":
+            if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
+                operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
+                UserDefaults.standard.set("plus", forKey: "PreviousOperation")
+                
+            }else {
+                UserDefaults.standard.set("plus", forKey: "PreviousOperation")
+
+            }
+        case "-" :
+            if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
+                operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
+                UserDefaults.standard.set("minus", forKey: "PreviousOperation")
+                
+            }else {
+                UserDefaults.standard.set("minus", forKey: "PreviousOperation")
+            }
             
+        case "*" :
+            if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
+                operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
+                UserDefaults.standard.set("multiply", forKey: "PreviousOperation")
+                
+            }else {
+                UserDefaults.standard.set("multiply", forKey: "PreviousOperation")
+
+            }
+           
+           
+        case "/" :
+            if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
+                operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
+                UserDefaults.standard.set("divide", forKey: "PreviousOperation")
+                
+            }else {
+                UserDefaults.standard.set("divide", forKey: "PreviousOperation")
+
+            }
+            
+           
+        case "%" :
+            accumulator = result / 100
+        case "C" :
+            accumulator = 0
+            UserDefaults.standard.set("none", forKey: "PreviousOperation")
+            UserDefaults.standard.set(0.0 , forKey: "PreviousNumber")
+        case "CE":
+            accumulator = 0
+        case "log" :
+            accumulator = log2(result)
         default:
             break
         }
@@ -34,5 +81,30 @@ class CalculatorBrain {
 
     func setOperand(_ value: Double) {
         accumulator = value
+        
+        if UserDefaults.standard.double(forKey: "PreviousNumber") != 0.0 {
+            
+        }else {
+            UserDefaults.standard.set(value, forKey: "PreviousNumber")
+        }
     }
+    func operations(perviousNumber: Double , accumulator : Double , operation : String ){
+        switch operation{
+    case "plus" :
+            self.accumulator  = perviousNumber + accumulator
+            UserDefaults.standard.set(self.accumulator, forKey: "PreviousNumber")
+    case "minus" :
+            self.accumulator  = perviousNumber - accumulator
+            UserDefaults.standard.set(self.accumulator, forKey: "PreviousNumber")
+    case "multiply" :
+            self.accumulator  = perviousNumber * accumulator
+            UserDefaults.standard.set(self.accumulator, forKey: "PreviousNumber")
+    case "divide" :
+            self.accumulator  = perviousNumber / accumulator
+            UserDefaults.standard.set(self.accumulator, forKey: "PreviousNumber")
+        default : break
+        
+        }
+    }
+    
 }

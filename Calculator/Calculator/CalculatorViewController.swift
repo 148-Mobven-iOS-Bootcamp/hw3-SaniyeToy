@@ -15,9 +15,10 @@ class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        UserDefaults.standard.set(0.0, forKey: "PreviousNumber")
+        UserDefaults.standard.set("none" , forKey: "PreviousOperation")
     }
-
+    
     private var userIsTyping = false
 
     private var brain = CalculatorBrain()
