@@ -7,6 +7,7 @@
 
 import Foundation
 class CalculatorBrain {
+    
     private var accumulator: Double = 0
     
     var result: Double {
@@ -21,6 +22,16 @@ class CalculatorBrain {
         switch operation {
         case "√":
             accumulator = sqrt(result)
+        case "%" :
+            accumulator = result / 100
+        case "CE":
+            accumulator = 0
+        case "log" :
+            accumulator = log2(result)
+        case "C" :
+            accumulator = 0
+            UserDefaults.standard.set("none", forKey: "PreviousOperation")
+            UserDefaults.standard.set(0.0 , forKey: "PreviousNumber")
         case "=":
             operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
             UserDefaults.standard.set("none", forKey: "PreviousOperation")
@@ -41,7 +52,6 @@ class CalculatorBrain {
             }else {
                 UserDefaults.standard.set("minus", forKey: "PreviousOperation")
             }
-            
         case "*" :
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
@@ -51,8 +61,6 @@ class CalculatorBrain {
                 UserDefaults.standard.set("multiply", forKey: "PreviousOperation")
 
             }
-           
-           
         case "/" :
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
@@ -60,20 +68,7 @@ class CalculatorBrain {
                 
             }else {
                 UserDefaults.standard.set("divide", forKey: "PreviousOperation")
-
             }
-            
-           
-        case "%" :
-            accumulator = result / 100
-        case "C" :
-            accumulator = 0
-            UserDefaults.standard.set("none", forKey: "PreviousOperation")
-            UserDefaults.standard.set(0.0 , forKey: "PreviousNumber")
-        case "CE":
-            accumulator = 0
-        case "log" :
-            accumulator = log2(result)
         default:
             break
         }
@@ -88,6 +83,7 @@ class CalculatorBrain {
             UserDefaults.standard.set(value, forKey: "PreviousNumber")
         }
     }
+    
     func operations(perviousNumber: Double , accumulator : Double , operation : String ){
         switch operation{
     case "plus" :
@@ -106,5 +102,4 @@ class CalculatorBrain {
         
         }
     }
-    
 }

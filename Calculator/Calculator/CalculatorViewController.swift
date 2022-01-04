@@ -10,7 +10,6 @@ import UIKit
 class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
-
     @IBOutlet var digitButtons: [UIButton]!
 
     override func viewDidLoad() {
