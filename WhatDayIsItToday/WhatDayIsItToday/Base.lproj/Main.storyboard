@@ -16,20 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB9-S5-GRk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB9-S5-GRk">
                                 <rect key="frame" x="20" y="109" width="374" height="96"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="spD-Iz-igu"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Dc-mHR">
-                                <rect key="frame" x="20" y="274" width="87" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Dc-mHR">
+                                <rect key="frame" x="20" y="274" width="75" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="87" id="WgG-Yl-ewx"/>
+                                    <constraint firstAttribute="width" constant="75" id="6HS-0B-qtQ"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
@@ -41,7 +38,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-TZ-St3">
-                                <rect key="frame" x="164" y="274" width="87" height="48"/>
+                                <rect key="frame" x="103" y="274" width="87" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="CUd-YY-xyR"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Month">
@@ -52,7 +52,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9G-ME-bsw">
-                                <rect key="frame" x="307" y="274" width="87" height="48"/>
+                                <rect key="frame" x="198" y="274" width="87" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="5CD-2p-DvR"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Year">
@@ -73,26 +76,40 @@
                                     <action selector="todayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZN-b7-wjy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0L-an-S4B">
+                                <rect key="frame" x="293" y="274" width="101" height="48"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="WeekDay">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="weekDayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fod-lz-7DE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NLD-TZ-St3" firstAttribute="baseline" secondItem="uSq-Dc-mHR" secondAttribute="firstBaseline" id="3fm-Mf-jug"/>
-                            <constraint firstItem="Y9G-ME-bsw" firstAttribute="leading" secondItem="NLD-TZ-St3" secondAttribute="trailing" constant="56" id="8FV-DN-s0Z"/>
-                            <constraint firstItem="aB9-S5-GRk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AmK-VJ-rlr"/>
-                            <constraint firstItem="NLD-TZ-St3" firstAttribute="baseline" secondItem="Y9G-ME-bsw" secondAttribute="baseline" id="Dij-sr-Jah"/>
-                            <constraint firstItem="aB9-S5-GRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="F52-v9-nRr"/>
-                            <constraint firstItem="aB9-S5-GRk" firstAttribute="centerX" secondItem="NLD-TZ-St3" secondAttribute="centerX" id="Ftf-Pl-Ubq"/>
-                            <constraint firstItem="NLD-TZ-St3" firstAttribute="leading" secondItem="uSq-Dc-mHR" secondAttribute="trailing" constant="57" id="LUm-lD-nzI"/>
-                            <constraint firstItem="gnU-yL-NO7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PH8-6h-22R"/>
-                            <constraint firstItem="gnU-yL-NO7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="STy-tF-aiS"/>
-                            <constraint firstItem="uSq-Dc-mHR" firstAttribute="top" secondItem="aB9-S5-GRk" secondAttribute="bottom" constant="69" id="amy-T9-Lxr"/>
-                            <constraint firstItem="aB9-S5-GRk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ja7-gu-uHO"/>
-                            <constraint firstItem="gnU-yL-NO7" firstAttribute="top" secondItem="uSq-Dc-mHR" secondAttribute="bottom" constant="91" id="ktX-k4-RXb"/>
-                            <constraint firstItem="uSq-Dc-mHR" firstAttribute="baseline" secondItem="NLD-TZ-St3" secondAttribute="baseline" id="mOn-S8-fiC"/>
-                            <constraint firstItem="aB9-S5-GRk" firstAttribute="leading" secondItem="uSq-Dc-mHR" secondAttribute="leading" id="nNo-Y8-1bx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gnU-yL-NO7" secondAttribute="trailing" constant="65" id="sBp-hY-ZpW"/>
-                            <constraint firstItem="aB9-S5-GRk" firstAttribute="trailing" secondItem="Y9G-ME-bsw" secondAttribute="trailing" id="x78-hI-vak"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="leading" secondItem="uSq-Dc-mHR" secondAttribute="leading" id="1sY-CQ-i92"/>
+                            <constraint firstItem="uSq-Dc-mHR" firstAttribute="top" secondItem="aB9-S5-GRk" secondAttribute="bottom" constant="69" id="2kI-4S-ofn"/>
+                            <constraint firstItem="NLD-TZ-St3" firstAttribute="baseline" secondItem="uSq-Dc-mHR" secondAttribute="firstBaseline" id="338-nY-VFB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gnU-yL-NO7" secondAttribute="trailing" constant="65" id="3iW-1s-tQa"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="E6d-GH-idy"/>
+                            <constraint firstItem="Y9G-ME-bsw" firstAttribute="top" secondItem="g0L-an-S4B" secondAttribute="top" id="Kge-En-m9v"/>
+                            <constraint firstItem="g0L-an-S4B" firstAttribute="leading" secondItem="Y9G-ME-bsw" secondAttribute="trailing" constant="8" id="OWp-Xj-lGJ"/>
+                            <constraint firstItem="NLD-TZ-St3" firstAttribute="baseline" secondItem="Y9G-ME-bsw" secondAttribute="baseline" id="XKW-EQ-2pI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gnU-yL-NO7" secondAttribute="bottom" constant="378" id="YZP-y2-sLJ"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="trailing" secondItem="g0L-an-S4B" secondAttribute="trailing" id="e6K-pp-I8y"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eA5-aP-dv6"/>
+                            <constraint firstItem="uSq-Dc-mHR" firstAttribute="baseline" secondItem="NLD-TZ-St3" secondAttribute="baseline" id="eUw-kX-jNb"/>
+                            <constraint firstItem="gnU-yL-NO7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="ghu-eo-dPx"/>
+                            <constraint firstItem="Y9G-ME-bsw" firstAttribute="bottom" secondItem="g0L-an-S4B" secondAttribute="bottom" id="gjU-dW-r3m"/>
+                            <constraint firstItem="gnU-yL-NO7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iVd-H0-tSf"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="k0M-qK-gIw"/>
+                            <constraint firstItem="gnU-yL-NO7" firstAttribute="top" secondItem="uSq-Dc-mHR" secondAttribute="bottom" constant="91" id="qIZ-IS-ih9"/>
+                            <constraint firstItem="Y9G-ME-bsw" firstAttribute="leading" secondItem="NLD-TZ-St3" secondAttribute="trailing" constant="8" id="qaS-dM-IS5"/>
+                            <constraint firstItem="NLD-TZ-St3" firstAttribute="leading" secondItem="uSq-Dc-mHR" secondAttribute="trailing" constant="8" id="yxq-Ib-42K"/>
                         </constraints>
                     </view>
                     <connections>

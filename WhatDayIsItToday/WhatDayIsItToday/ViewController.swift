@@ -27,8 +27,13 @@ class ViewController: UIViewController {
         dateLabel.text = todayDate.year
     }
     
+    
+    @IBAction func weekDayButton(_ sender: Any) {
+        dateLabel.text = todayDate.dayInWeek
+    }
+    
     @IBAction func todayButton(_ sender: Any) {
-        dateLabel.text = todayDate.dateAsPrettyString
+        dateLabel.text = todayDate.dateAsPrettyString + "  " + todayDate.dayInWeek
     }
 }
 
