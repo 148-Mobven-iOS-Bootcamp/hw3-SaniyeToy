@@ -16,17 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB9-S5-GRk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB9-S5-GRk">
                                 <rect key="frame" x="20" y="109" width="374" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="spD-Iz-igu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Dc-mHR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Dc-mHR">
                                 <rect key="frame" x="20" y="274" width="87" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="WgG-Yl-ewx"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Day">
@@ -36,9 +40,8 @@
                                     <action selector="dayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79S-2T-S8J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-TZ-St3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-TZ-St3">
                                 <rect key="frame" x="164" y="274" width="87" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Month">
@@ -48,9 +51,8 @@
                                     <action selector="monthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zih-Ff-jhy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9G-ME-bsw">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9G-ME-bsw">
                                 <rect key="frame" x="307" y="274" width="87" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Year">
@@ -60,9 +62,8 @@
                                     <action selector="yearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJG-ti-RKl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-yL-NO7">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-yL-NO7">
                                 <rect key="frame" x="71" y="413" width="278" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="What Day Is Today">
@@ -75,6 +76,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NLD-TZ-St3" firstAttribute="baseline" secondItem="uSq-Dc-mHR" secondAttribute="firstBaseline" id="3fm-Mf-jug"/>
+                            <constraint firstItem="Y9G-ME-bsw" firstAttribute="leading" secondItem="NLD-TZ-St3" secondAttribute="trailing" constant="56" id="8FV-DN-s0Z"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AmK-VJ-rlr"/>
+                            <constraint firstItem="NLD-TZ-St3" firstAttribute="baseline" secondItem="Y9G-ME-bsw" secondAttribute="baseline" id="Dij-sr-Jah"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="F52-v9-nRr"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="centerX" secondItem="NLD-TZ-St3" secondAttribute="centerX" id="Ftf-Pl-Ubq"/>
+                            <constraint firstItem="NLD-TZ-St3" firstAttribute="leading" secondItem="uSq-Dc-mHR" secondAttribute="trailing" constant="57" id="LUm-lD-nzI"/>
+                            <constraint firstItem="gnU-yL-NO7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PH8-6h-22R"/>
+                            <constraint firstItem="gnU-yL-NO7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="STy-tF-aiS"/>
+                            <constraint firstItem="uSq-Dc-mHR" firstAttribute="top" secondItem="aB9-S5-GRk" secondAttribute="bottom" constant="69" id="amy-T9-Lxr"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ja7-gu-uHO"/>
+                            <constraint firstItem="gnU-yL-NO7" firstAttribute="top" secondItem="uSq-Dc-mHR" secondAttribute="bottom" constant="91" id="ktX-k4-RXb"/>
+                            <constraint firstItem="uSq-Dc-mHR" firstAttribute="baseline" secondItem="NLD-TZ-St3" secondAttribute="baseline" id="mOn-S8-fiC"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="leading" secondItem="uSq-Dc-mHR" secondAttribute="leading" id="nNo-Y8-1bx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gnU-yL-NO7" secondAttribute="trailing" constant="65" id="sBp-hY-ZpW"/>
+                            <constraint firstItem="aB9-S5-GRk" firstAttribute="trailing" secondItem="Y9G-ME-bsw" secondAttribute="trailing" id="x78-hI-vak"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="aB9-S5-GRk" id="QdF-U2-IP9"/>

@@ -14,6 +14,7 @@
 		220F73672785809400B9C767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220F73662785809400B9C767 /* Assets.xcassets */; };
 		220F736A2785809400B9C767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220F73682785809400B9C767 /* LaunchScreen.storyboard */; };
 		220F73752785809400B9C767 /* WhatDayIsItTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F73742785809400B9C767 /* WhatDayIsItTodayTests.swift */; };
+		220F738E2785870900B9C767 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220F738D2785870900B9C767 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		220F73702785809400B9C767 /* WhatDayIsItTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatDayIsItTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		220F73742785809400B9C767 /* WhatDayIsItTodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatDayIsItTodayTests.swift; sourceTree = "<group>"; };
 		220F737A2785809400B9C767 /* WhatDayIsItTodayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatDayIsItTodayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		220F738D2785870900B9C767 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				220F735D2785809300B9C767 /* AppDelegate.swift */,
 				220F735F2785809300B9C767 /* SceneDelegate.swift */,
 				220F73612785809300B9C767 /* ViewController.swift */,
+				220F738D2785870900B9C767 /* DateExtension.swift */,
 				220F73632785809300B9C767 /* Main.storyboard */,
 				220F73662785809400B9C767 /* Assets.xcassets */,
 				220F73682785809400B9C767 /* LaunchScreen.storyboard */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				220F73622785809300B9C767 /* ViewController.swift in Sources */,
+				220F738E2785870900B9C767 /* DateExtension.swift in Sources */,
 				220F735E2785809300B9C767 /* AppDelegate.swift in Sources */,
 				220F73602785809300B9C767 /* SceneDelegate.swift in Sources */,
 			);
