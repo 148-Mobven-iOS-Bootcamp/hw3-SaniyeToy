@@ -1,26 +1,33 @@
-### This application that I created 
+### This applications that I created Calculator and Date app
+
 1. [Features](#Features)
-3. [Usage](#Usage)
-4. [Screen Shots](#ScreenShots)
-5. [Communication](#Communication)
+2. [Screen Shots](#ScreenShots)
+3. [Communication](#Communication)
 
 ## Features<a name="Features"></a>
+### Calculator
+- Designed based on current iOS design
+- There are CE,C,log,Square Root, Four basic operation .
+- Serial processing possible
+
+### What Day Is Today
+- There are 5 buttons where you can get information about today's history.
+- Day,Month,Year and as a bonus, you can also find out what day we are on.
+- What Day Is Today button gives full date
+- Butonlardan birine tıklandığında üst etikette tarihi görebilirsiniz.
  
-## Usage <a name="Usage"></a>
 
 ## Screen Shots <a name="ScreenShots"></a>
  <table>
   <tr>
-    <td>Movie List View</td>
-    <td>Movie Details View</td>
-    <td>Favorites View</td>
+    <td>What Day Is Today</td>
+    <td>Calculator</td>
 
-   
   </tr>
   <tr>
-   <td><img src="https://user-images.githubusercontent.com/75203610/139830599-f6a3aed6-2b6d-4aca-a188-f0fb8d4f08f6.jpg" width=280 height=480></td>
-    <td><img src="" width=280 height=480></td>
-    <td><img src="" width=280 height=480></td>
+   <td><img src="https://user-images.githubusercontent.com/75203610/148232194-0b9f9184-5289-4f37-8aaf-2d8a2f9a3751.png" width=250 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/75203610/148228659-b9b040ce-4156-4ec6-acba-836053678de1.png" width=250 height=480></td>
+
   </tr>
  </table>
 
