@@ -52,7 +52,7 @@ class CalculatorBrain {
             }else {
                 UserDefaults.standard.set("minus", forKey: "PreviousOperation")
             }
-        case "*" :
+        case "x" :
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
                 UserDefaults.standard.set("multiply", forKey: "PreviousOperation")
