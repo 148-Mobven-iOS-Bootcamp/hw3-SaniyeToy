@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var dateLabel: UILabel!
     let todayDate: Date = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,16 +23,17 @@ class ViewController: UIViewController {
     @IBAction func monthButton(_ sender: UIButton) {
         dateLabel.text = todayDate.month
     }
+    
     @IBAction func yearButton(_ sender: UIButton) {
         dateLabel.text = todayDate.year
     }
-    
     
     @IBAction func weekDayButton(_ sender: Any) {
         dateLabel.text = todayDate.dayInWeek
     }
     
     @IBAction func todayButton(_ sender: Any) {
+        //Action that prints today's date as day month year and day name
         dateLabel.text = todayDate.dateAsPrettyString + "  " + todayDate.dayInWeek
     }
 }
