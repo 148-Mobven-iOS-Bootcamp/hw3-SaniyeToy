@@ -20,25 +20,25 @@ class CalculatorBrain {
         guard let operation = operation else { return }
         
         switch operation {
-        case "√":
+        case Operations.sqrt.rawValue:
             accumulator = sqrt(result)
-        case "%" :
+        case Operations.percent.rawValue :
             accumulator = result / 100
-        case "log" :
+        case Operations.log.rawValue :
             accumulator = log2(result)
-        case "CE":
+        case Operations.CE.rawValue:
             //Action to clear the last number written
             accumulator = 0
-        case "C" :
+        case Operations.C.rawValue :
             //Action to clear the last number written and last operation
             accumulator = 0
             UserDefaults.standard.set("none", forKey: "PreviousOperation")
             UserDefaults.standard.set(0.0 , forKey: "PreviousNumber")
-        case "=":
+        case Operations.equal.rawValue:
             //The last entered operation is performed and no operation is recorded in the memory
             operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
             UserDefaults.standard.set("none", forKey: "PreviousOperation")
-        case "+":
+        case Operations.plus.rawValue:
             //The last entered operation is performed and the addition operation is stored in the memory.
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
@@ -47,7 +47,7 @@ class CalculatorBrain {
             }else {
                 UserDefaults.standard.set("plus", forKey: "PreviousOperation")
             }
-        case "-" :
+        case Operations.minus.rawValue:
             //The last entered operation is performed and the minus operation is stored in the memory.
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
@@ -56,14 +56,14 @@ class CalculatorBrain {
             }else {
                 UserDefaults.standard.set("minus", forKey: "PreviousOperation")
             }
-        case "x" :
+        case Operations.multiply.rawValue :
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
                 UserDefaults.standard.set("multiply", forKey: "PreviousOperation")
             }else {
                 UserDefaults.standard.set("multiply", forKey: "PreviousOperation")
             }
-        case "/" :
+        case Operations.divide.rawValue :
             if UserDefaults.standard.string(forKey: "PreviousOperation") != "none"{
                 operations(perviousNumber: UserDefaults.standard.double(forKey: "PreviousNumber"), accumulator: result, operation: UserDefaults.standard.string(forKey: "PreviousOperation")!)
                 UserDefaults.standard.set("divide", forKey: "PreviousOperation")
@@ -101,4 +101,18 @@ class CalculatorBrain {
         default : break
         }
     }
+    
+    enum Operations : String {
+        case sqrt = "√"
+        case percent = "%"
+        case log = "log"
+        case C = "C"
+        case CE = "CE"
+        case equal = "="
+        case plus = "+"
+        case minus = "-"
+        case multiply = "x"
+        case divide = "/"
+    }
+        
 }
