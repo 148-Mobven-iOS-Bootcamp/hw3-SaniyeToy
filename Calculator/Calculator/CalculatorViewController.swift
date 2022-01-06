@@ -8,10 +8,10 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-
+    
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet var digitButtons: [UIButton]!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.set(0.0, forKey: "PreviousNumber")
@@ -19,9 +19,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private var userIsTyping = false
-
     private var brain = CalculatorBrain()
-
     var result: Double {
         get {
             return Double(resultLabel.text ?? "0.0") ?? 0.0
@@ -30,7 +28,7 @@ class CalculatorViewController: UIViewController {
             resultLabel.text = String(newValue)
         }
     }
-
+    
     @IBAction func digitButtonTapped(_ sender: UIButton) {
         if userIsTyping {
             var resultText = String(Int(result))
@@ -41,7 +39,7 @@ class CalculatorViewController: UIViewController {
             userIsTyping.toggle()
         }
     }
-
+    
     @IBAction func operationButtonTapped(_ sender: UIButton) {
         userIsTyping = false
         brain.setOperand(result)
