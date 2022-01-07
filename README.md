@@ -14,7 +14,7 @@
 - There are 5 buttons where you can get information about today's history.
 - Day,Month,Year and as a bonus, you can also find out what day we are on.
 - What Day Is Today button gives full date
-- Butonlardan birine tıklandığında üst etikette tarihi görebilirsiniz.
+- The date on the top label as you can see from the buttons
  
 
 ## Screen Shots <a name="ScreenShots"></a>
